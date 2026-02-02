@@ -46,3 +46,32 @@ Both PR #1 and PR #2 provide complete implementations of the Catholic Case for C
 
 ## Action Taken
 The conflicts have been resolved by accepting all changes from the main branch (PR #2), with the addition of .gitignore from PR #1 which is a useful addition that doesn't conflict with anything.
+
+## Instructions to Resolve PR #1 Conflicts
+
+To resolve the conflicts in PR #1 (copilot/build-static-policy-website), follow these steps:
+
+```bash
+# Checkout the PR #1 branch
+git checkout copilot/build-static-policy-website
+
+# Merge main with allow-unrelated-histories flag
+git merge main --allow-unrelated-histories
+
+# Resolve conflicts by accepting the main branch version for all conflicted files
+git checkout --theirs index.html robots.txt sitemap.xml
+
+# Remove the styles.css file as it's not needed (main uses inline CSS)
+git rm styles.css
+
+# Stage all changes
+git add -A
+
+# Commit the merge
+git commit -m "Resolve merge conflicts by accepting changes from main (PR #2)"
+
+# Push the resolved branch
+git push origin copilot/build-static-policy-website
+```
+
+Alternatively, since PR #2 has already been merged and provides a superior implementation, **the recommended action is to close PR #1** without merging, as its work has been superseded.
