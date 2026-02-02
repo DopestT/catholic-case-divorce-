@@ -1,8 +1,3 @@
-# robots.txt for catholic-case-divorce-ph
-# GitHub Pages URL: https://dopestt.github.io/catholic-case-divorce-ph/
-
 User-agent: *
 Allow: /
-
-# Sitemap location
 Sitemap: https://dopestt.github.io/catholic-case-divorce-ph/sitemap.xml
