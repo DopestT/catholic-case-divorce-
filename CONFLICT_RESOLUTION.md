@@ -60,6 +60,7 @@ git checkout copilot/build-static-policy-website
 git merge main
 
 # Resolve conflicts by accepting the main branch version for all conflicted files
+# 'theirs' refers to main since we're merging main into this branch
 git checkout --theirs index.html robots.txt sitemap.xml
 
 # Remove the styles.css file as it's not needed (main uses inline CSS)
