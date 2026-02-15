@@ -1,0 +1,24 @@
+# Netlify/modern static host cache headers
+# For use with Netlify, Cloudflare Pages, Vercel, etc.
+
+# CSS and JavaScript - 1 year, immutable
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images - 1 year
+/*.jpg
+  Cache-Control: public, max-age=31536000
+/*.png
+  Cache-Control: public, max-age=31536000
+/*.gif
+  Cache-Control: public, max-age=31536000
+
+# PDFs - 1 month
+/*.pdf
+  Cache-Control: public, max-age=2592000
+
+# HTML - 1 hour
+/*.html
+  Cache-Control: public, max-age=3600
